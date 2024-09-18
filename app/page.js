@@ -2,6 +2,9 @@ import Link from "next/link";
 import MyFirstComponent from "./_components/my-first-component";
 
 export default function Home() {
+
+  let linkStyles = "underline text-cyan-600 hover:text-cyan-300";
+
   return (
     <main>
       <h1>CPRG306 Class Examples</h1>
@@ -10,13 +13,18 @@ export default function Home() {
       <h2>Example Links</h2>
       <ul>
         <li>
-          <Link className="underline text-cyan-600 hover:text-cyan-300" href="./week-2/">
-            Week 2 Content
+          <Link href="./week-2/" className={linkStyles}>
+            Week 2  - Introduction to React
           </Link>
         </li>
         <li>
-          <Link className="underline text-cyan-600 hover:text-cyan-300" href="./week-3/" >
-            Week 3 Content
+          <Link href="./week-3/objects" className={linkStyles}>
+            Week 3 - Objects
+          </Link>
+        </li>
+        <li>
+          <Link href="./week-3/props" className={linkStyles}>
+            Week 3 - Props
           </Link>
         </li>
       </ul>
