@@ -64,7 +64,7 @@ export default function ContactForm() {
         <input className="bg-slate-300 px-2 py-1 rounded border border-gray-500 focus:bg-blue-100" type="email" onChange={handleEmailChange} />
       </div>
       <div className="mb-3">
-        <label className="inline-block w-40">Birthdate:</label>
+        <label className="inline-block w-40">Birth Date:</label>
         <input className="bg-slate-300 px-2 py-1 rounded border border-gray-500 focus:bg-blue-100" type="date" onChange={handleBirthdateChange} />
       </div>
       <div className="mb-3">
