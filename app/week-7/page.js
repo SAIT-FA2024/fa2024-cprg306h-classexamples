@@ -15,16 +15,30 @@ export default function PageDirectory(){
         directoryData.map( (contact) => ({...contact}) )
     );
     
+    const [isFormOpen, setFormOpen] = useState(false);
+
     const handleNewContact = (newContact) => {
         setDirectoryList( [...directoryList, newContact] )
     }
 
+    const openForm = () => setFormOpen(true);
+    const closeForm = () => setFormOpen(false);
+
     return(
-        <main className="m-5">
+        <main>
+            {
+                isFormOpen &&
+                <DirectoryForm
+                    directoryArray={directoryList}
+                    newContactFunc={handleNewContact}
+                    closeFormFunc={closeForm}
+                />
+            }
             <h1>Contacts Directory</h1>
-            <DirectoryForm directoryArray={directoryList}/>
             <DirectoryList directoryArray={directoryList} />
-            
+            <div>
+                <button onClick={openForm} >Add new contact</button>
+            </div>
         </main>
     );
 }
