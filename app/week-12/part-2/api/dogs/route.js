@@ -32,7 +32,7 @@ export async function POST(request){
     // add newDog to database
     // const newDogRef = (db, "dogs");
     newDog.id = 4;
-    // INSERT INTO dogs (name, age) VALUES ( ${newDog.name}, ${}newDog.age );
+    // INSERT INTO dogs (name, age) VALUES ( ${newDog.name}, ${newDog.age} );
 
     return new Response( JSON.stringify(newDog), {status:201} );
 }

@@ -67,6 +67,11 @@ export default function Home() {
             Week 12 - API Implementation
           </Link>
         </li>
+        <li>
+          <Link href="./week-13/" className={linkStyles}>
+            Week 13 - API Database Integration
+          </Link>
+        </li>
       </ul>
     </main>
   );
